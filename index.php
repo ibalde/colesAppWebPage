@@ -7,7 +7,7 @@
     <title>Kennesaw State University - Coles College of Business</title>
     <meta content="" name="keyword" />
     <meta content="" name="description">
-    <meta content="KSU MadLab" name="Coles">
+    <meta content="KSU MadLab" name="author">
     
     <meta content='True' name='HandheldFriendly' />
     <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
@@ -104,35 +104,40 @@
         <p>
         <br />
         <p align="center">Please Login to access restricted data</p>
-        <form name="form1" action="" method="POST" onSubmit="return checkValues();"><table class="login" cellpadding="2" cellspacing="10" align="center">
-        <tr><td>Username:</td><td><input type="text" name="username" maxlength="15"/></td></tr>
-        <tr><td>Password:</td><td><input type="password" name="password" maxlength="10"/></td></tr>
-        <tr><td colspan="2" align="center"><input type="submit" name="submit" value="login"/></td></tr>
-        </table>
-        </form>
-        <?php 
-if(isset($_POST['submit'])){
-	$user1 = "coles";
-	$pass1 = "bigowl";
-	$user= $_POST['username'];
-	$pass = $_POST['password'];
-
-	if($user == $user1 && $pass == $pass1){
-		$_SESSION['username'] =$user;
-		$_SESSION['password'] = $pass;
-		//$_SESSION['start'] = time();
-		//$_SESSION['expire'] = $_SESSION['start']+(10);
-		echo "You are currently logged in";
-	}
-	else echo "Invalid username/password";
-}
-if(isset($_SESSION['username'])){
-
-	ini_set('session.gc_maxlifetime', 10);
-	
-}
-
-?>
+            <form name="form1" action="" method="POST" onSubmit="return checkValues();">
+                <table class="login" cellpadding="2" cellspacing="10" align="center">
+                    <tr>
+                        <td>Username:</td>
+                        <td><input type="text" name="username" maxlength="15"/></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" name="password" maxlength="10"/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><input type="submit" name="submit" value="login"/></td>
+                    </tr>
+                </table>
+            </form>
+            <?php 
+                if(isset($_POST['submit'])){
+                    $user1 = "coles";
+                    $pass1 = "bigowl";
+                    $user= $_POST['username'];
+                    $pass = $_POST['password'];
+                    if($user == $user1 && $pass == $pass1){
+                        $_SESSION['username'] =$user;
+                        $_SESSION['password'] = $pass;
+                        //$_SESSION['start'] = time();
+                        //$_SESSION['expire'] = $_SESSION['start']+(10);
+                        echo "You are currently logged in";
+                    }
+                    else echo "Invalid username/password";
+                }
+                if(isset($_SESSION['username'])) {
+                    ini_set('session.gc_maxlifetime', 10);           
+                }
+            ?>
         </p>
     </div>
 </body>
