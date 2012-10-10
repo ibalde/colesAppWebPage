@@ -15,28 +15,6 @@
     
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script>
-$(function(){
-	$('#coolMenu').find('>li').hover(function(){
-		$(this).find('ul')
-		.removeClass('noJS')
-		.stop(true, true).slideToggle('fast');
-	});
-});
-
-function checkValues(){
-	if(document.form1.username.value ==""){
-		alert("Please enter a value for the username");
-		document.form1.username.focus();
-		return false;
-	}
-	if (document.form1.password.value==""){
-			alert("Please enter the password");
-			document.form1.password.focus();
-			return false;
-	}
-}
-</script>
 
 </head>
 <body>
@@ -45,26 +23,73 @@ function checkValues(){
             <!-- background added in the css -->
             <img src="images/layout/logo.png" alt="Kennesaw State University - Coles College of Business" />
         </div>
-        
-            <ul id="coolMenu">
-                <li class="mover"><a href="index.php">Home</a></li>
-                <li><a href="#">Ressources</a>
-                	<ul>
-                		<li><a href="#">Tables</a></li>
-                        <li><a href="#">Text</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Web Services</a></li>
-                	</ul>
-                </li>
-                <li><a href="">Updates</a>
-                	<ul>
-                    	<li><a href="#">Advising Traffic</a></li>
-                        <li><a href="#">Maps</a></li>
-                        <li><a href="#">Directory</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Site Navigation</a></li>
-            </ul>
+        <div id="nav"> 
+            <div class="constrain">
+                <ul> 
+                    <li><a href="#">Home</a></li> 
+                    <li>
+                        <a href="#">Resources</a>
+                        <ul>
+                            <li>
+                                <a href="#">Tables</a>
+                                <ul>
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Text</a>
+                                <ul>
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">FAQs</a>
+                                <ul>
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Web Servics</a>
+                                <ul>
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li> 
+                    <li>
+                        <a href="#">Updates</a>
+                        <ul>
+                            <li>
+                                <a href="#">Advising Traffic</a>
+                                <ul>
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Maps</a>
+                                <ul>
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Directory</a>
+                                <ul>
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li> 
+                    <li><a href="#">Site Navigation</a></li>
+                </ul> 
+            </div>
+        </div>
     </header>
     <div id="content" class="constrain">
         <h1>Welcome</h1>

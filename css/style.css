@@ -16,62 +16,59 @@ nav ul { height: 42px; }
     #content h1 { border-bottom: 1px dotted #febe10; }
     #content p { line-height: 30px; }
 	
-	/*Drop down menu from internet code
+	/*Drop down menu 
 	--------------------------------------*/
 .mover { margin-left: 130px; }
-#coolMenu {
+#nav {
+    background-color: #000;
+    float: left;    
+    overflow: hidden;
+    width: 100%;
+}
+#nav ul {
+    list-style:none;
+}
+#nav ul li {
+    float:left;
+}
+#nav ul li a {
     float: left;
-	width: 100%;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration:none;
 }
-#coolMenu,
-#coolMenu ul {
-    list-style: none;
-	
-}
-#coolMenu > li {
-    float: left;
-}
-#coolMenu li a {
-	display: block;
-    height: 2em;
-    line-height: 2em;
-    padding: 0 1.5em;
-    text-decoration: none;
-}
-#coolMenu ul {
+#nav li ul {
+    background-color: #3C4042;
+    left: -999em;
+    margin: 35px 0 0;
     position: absolute;
-    display: none;
-z-index: 999;
+    width: 160px;
+    z-index: 9999;
 }
-#coolMenu ul li a {
-    width: 140px;
+#nav li ul a {
+    background: none;
+    border: 0 none;
+    margin-right: 0;
+    min-width: 120px;
 }
-#coolMenu li:hover ul.noJS {
-    display: block;
+#nav ul li a:hover,
+#nav ul li:hover > a {
+    color: #252525;
+    background: #666
+
 }
-/*Main menu
---------------------------------------------*/
-#coolMenu{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size:12px;
-	background:#2f8be8;
+#nav li ul a:hover, 
+#nav ul li li:hover > a  {
+    color: #2c2c2c;
+    background: #febe10;
 }
-#coolMenu > li > a {
-	color:#fff;
-	font-weight:bold;
+#nav li:hover ul {
+    left: auto;
 }
-#coolMenu > li:hover > a{
-	background:#f09d28;
-	color:#000;
+#nav li li ul {
+    margin: -1px 0 0 160px;
+    visibility:hidden;
 }
-/*Submenu
----------------------------------------------*/
-#coolMenu ul{
-	background:#f09d28;
-}
-#coolMenu ul li a{
-	color:#000;
-}
-#coolMenu ul li:hover a {
-	background:#ffc97c;
+#nav li li:hover ul {
+    visibility:visible;
 }
