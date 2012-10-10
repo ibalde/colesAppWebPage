@@ -26,7 +26,7 @@
         <div id="nav"> 
             <div class="constrain">
                 <ul> 
-                    <li><a href="#">Home</a></li> 
+                    <li><a href="#" class="remove-padding">Home</a></li> 
                     <li>
                         <a href="#">Resources</a>
                         <ul>
